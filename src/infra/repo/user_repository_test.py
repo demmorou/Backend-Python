@@ -18,6 +18,8 @@ def test_insert_user():
     new_user = user_repository.insert_user(name, password)
     user = engine.execute(f"SELECT * FROM users WHERE id={new_user.id};").fetchone()
 
+    engine.execute(f"DELETE FROM users WHERE id={new_user.id};")
+
     assert new_user.id == user.id
     assert new_user.name == user.name
     assert new_user.password == user.password
