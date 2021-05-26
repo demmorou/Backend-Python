@@ -6,6 +6,7 @@ click==8.0.1
 distlib==0.3.1
 filelock==3.0.12
 flake8==3.9.2
+greenlet==1.1.0
 identify==2.2.6
 isort==5.8.0
 lazy-object-proxy==1.6.0
@@ -20,6 +21,7 @@ pylint==2.8.2
 PyYAML==5.4.1
 regex==2021.4.4
 six==1.16.0
+SQLAlchemy==1.4.15
 toml==0.10.2
 virtualenv==20.4.7
 wrapt==1.12.1
