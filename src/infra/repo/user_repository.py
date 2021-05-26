@@ -1,8 +1,8 @@
 # pylint: disable=E1101
 
-from collections import namedtuple
+from src.domain.models import Users
 from src.infra.config import DatabaseConnectionHandler
-from src.infra.entities import Users
+from src.infra.entities import Users as UsersModels
 
 
 class UserRepository:
@@ -16,15 +16,13 @@ class UserRepository:
         :return - tuple with new user inserted
         """
 
-        InsertData = namedtuple("Users", "id, name, password")
-
         with DatabaseConnectionHandler() as db_connection:
             try:
-                new_user = Users(name=name, password=password)
+                new_user = UsersModels(name=name, password=password)
                 db_connection.session.add(new_user)
                 db_connection.session.commit()
 
-                return InsertData(
+                return Users(
                     id=new_user.id, name=new_user.name, password=new_user.password
                 )
             except:
