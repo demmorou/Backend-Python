@@ -1,2 +1,2 @@
-from .pets import Pets
+from .pets import Pets, AnimalTypes
 from .users import Users
