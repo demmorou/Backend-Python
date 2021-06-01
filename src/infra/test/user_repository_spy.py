@@ -28,6 +28,6 @@ class UserRepositorySpy:
     def find_by_id(self, user_id: int) -> Users:
         """Spy to user attributes"""
 
-        self.find_user_by_name_params["user_id"] = user_id
+        self.find_user_by_id_params["user_id"] = user_id
 
         return mock_user()
