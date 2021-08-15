@@ -4,7 +4,7 @@ from src.domain.models import Users
 
 
 class FindUser(ABC):
-    """Abstract to find user user case"""
+    """Interface to find user user case"""
 
     @abstractclassmethod
     def by_id(cls, user_id: int) -> Dict[bool, Users]:
