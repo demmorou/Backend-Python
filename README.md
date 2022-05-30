@@ -8,7 +8,7 @@
 </h4>
 
 <p align="center">
-  <img alt="Issues" src="https://img.shields.io/github/issues/eureka-sun/Elixir-Study">
+  <img alt="Issues" src="https://img.shields.io/github/issues/demmorou/Backend-Python">
   <img alt="Language" src="https://img.shields.io/badge/language%20count-1-purple">
 </p>
 
