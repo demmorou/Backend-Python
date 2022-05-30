@@ -1,0 +1,1 @@
+from .register_pet_composite import register_pet_compose
