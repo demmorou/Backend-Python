@@ -1,16 +1,17 @@
 from typing import Type
+from src.main.interface import RouteInterface
 from src.domain.use_cases.register_pet import RegisterPetInterface
 from src.presenters.helpers import HttpRequest, HttpResponse
 from src.presenters.errors import HttpErrors
 
 
-class RegisterPetController:
+class RegisterPetController(RouteInterface):
     """Class to define route to register a pet"""
 
     def __init__(self, register_pet_use_case: Type[RegisterPetInterface]):
         self.register_pet_use_case = register_pet_use_case
 
-    def route(self, http_request: Type[HttpRequest]) -> HttpResponse:
+    def handle(self, http_request: Type[HttpRequest]) -> HttpResponse:
         """Method do call use case"""
 
         response = None

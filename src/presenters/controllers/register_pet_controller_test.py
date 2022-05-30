@@ -1,8 +1,8 @@
 from faker import Faker
 from src.data.test import RegisterPetSpy
 from src.infra.test import PetRepositorySpy
-from .register_pet_controller import RegisterPetController
 from src.presenters.helpers import HttpRequest
+from .register_pet_controller import RegisterPetController
 
 faker = Faker()
 
@@ -23,7 +23,7 @@ def test_route():
         },
     }
 
-    register_pet_route.route(HttpRequest(body=attributes))
+    register_pet_route.handle(HttpRequest(body=attributes))
 
     # Testing input
     assert register_pet_use_case.registry_param["name"] == attributes["name"]
